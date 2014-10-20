@@ -1,8 +1,8 @@
-execute pathogen#infect()
-
-colorscheme desert
+colorscheme monokai
+set nocompatible
 syntax enable
-filetype indent on
+filetype plugin indent on
+set mouse=a
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -13,4 +13,3 @@ set showcmd
 set incsearch
 set hlsearch
 set ruler
-set showcmd
