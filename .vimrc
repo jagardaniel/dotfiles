@@ -1,3 +1,5 @@
+" vim configuration
+
 colorscheme monokai
 set nocompatible
 syntax enable
