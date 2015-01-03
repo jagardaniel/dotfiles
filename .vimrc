@@ -1,5 +1,3 @@
-" vim configuration
-
 colorscheme monokai
 set nocompatible
 syntax enable
@@ -15,3 +13,11 @@ set showcmd
 set incsearch
 set hlsearch
 set ruler
+
+" settings for gvim on windows
+
+if has("gui_running")
+    if has("gui_win32")
+        set guifont=Consolas:h10:cANSI
+    endif
+endif
