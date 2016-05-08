@@ -1,8 +1,10 @@
 execute pathogen#infect()
+" nvie/vim-flake8
+" pearofducks/ansible-vim
+
+filetype plugin indent on
 
 colorscheme hybrid
-set background=dark
-filetype plugin indent on
 syntax on
 
 set hlsearch
@@ -11,13 +13,13 @@ set smartcase
 set cursorline
 set showmatch
 set ruler
+set laststatus=2
+set history=1000
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
 inoremap jj <Esc>
-let g:netrw_liststyle=3
-
-autocmd Filetype python highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-autocmd Filetype python match OverLength /\%>79v.\+/
+nnoremap <Space> :noh<CR>
+set pastetoggle=<F2>
