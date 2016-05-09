@@ -6,6 +6,7 @@ filetype plugin indent on
 
 colorscheme hybrid
 syntax on
+set background=dark
 
 set hlsearch
 set ignorecase
