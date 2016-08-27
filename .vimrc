@@ -5,8 +5,7 @@ execute pathogen#infect()
 
 filetype plugin indent on
 
-colorscheme gruvbox
-set background=dark
+colorscheme hybrid
 syntax on
 
 set hlsearch
@@ -22,15 +21,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-set statusline=
-set statusline+=\ [%n]
-set statusline+=\ %<%F
-set statusline+=\ %h%m%r
-set statusline+=\ %{fugitive#statusline()}
-set statusline+=\ %=%-15.(%l/%L%)
-set statusline+=\ %P
-set statusline+=\
-
 inoremap jj <Esc>
 nnoremap <Space> :noh<CR>
 set pastetoggle=<F2>
+
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
