@@ -1,11 +1,9 @@
 execute pathogen#infect()
-" ansible-vim
-" vim-flake8
-" vim-fugitive
 
 filetype plugin indent on
 
 colorscheme hybrid
+set background=dark
 syntax on
 
 set hlsearch
@@ -16,13 +14,16 @@ set showmatch
 set ruler
 set laststatus=2
 set history=1000
+set backspace=indent,eol,start
+set nocompatible
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
+let mapleader = ","
 inoremap jj <Esc>
-nnoremap <Space> :noh<CR>
+nnoremap <F3> :noh<CR>
 set pastetoggle=<F2>
 
 nnoremap <C-j> <C-w>j
