@@ -1,35 +1,38 @@
-execute pathogen#infect()
-
+set nocompatible
 filetype plugin indent on
 
-colorscheme hybrid
+syntax enable
 set background=dark
-syntax on
+colorscheme codedark
 
+set ruler
+set number
+set laststatus=2
+set wildmenu
+set showmatch
+set showcmd
+
+set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-set cursorline
-set showmatch
-set showcmd
-set ruler
-set laststatus=2
-set history=1000
-set backspace=indent,eol,start
-set splitright
-set splitbelow    
-set number
 
-set tabstop=4
-set shiftwidth=4
+set autoindent
 set expandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 
-let mapleader = ","
+set splitright
+set splitbelow
+
+set backspace=indent,eol,start
+set history=1000
+
+set visualbell t_vb=
+
+let mapleader=","
 inoremap jj <Esc>
-nnoremap <F3> :noh<CR>
 set pastetoggle=<F2>
 
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+let g:netrw_banner = 0
