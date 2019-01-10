@@ -8,7 +8,6 @@ colorscheme codedark
 set ruler
 set number
 set laststatus=2
-set wildmenu
 set showmatch
 set showcmd
 
