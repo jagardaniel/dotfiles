@@ -9,11 +9,14 @@ endif
 
 set number
 set wildmenu
-set hlsearch
 set backspace=indent,eol,start
 set listchars=tab:>\ ,trail:-,nbsp:+
 set visualbell
 set t_vb=
+
+set hlsearch
+set smartcase
+set ignorecase
 
 set autoindent
 set expandtab
