@@ -1,19 +1,3 @@
--- Automatically install and set up packer.nvim
-local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  packer_bootstrap = vim.fn.system({
-    'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path
-  })
-end
-
--- Autocommand that reloads neovim whenever you save this file
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
-
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
@@ -29,12 +13,6 @@ require('packer').startup(function(use)
 
   -- Colorscheme with VScode's light and dark theme
   use 'Mofiqul/vscode.nvim'
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
 end)
 
 -- nvim-lspconfig configuration
@@ -70,7 +48,7 @@ for _, lsp in pairs(servers) do
   }
 end
 
--- nvim-treesitter configuration
+-- nvim-treesitter configuration (:TSInstall <lang>)
 require('nvim-treesitter.configs').setup {
   highlight = {
     enable = true
