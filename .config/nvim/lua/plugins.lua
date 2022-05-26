@@ -11,6 +11,9 @@ require('packer').startup(function(use)
   -- Autopair plugin
   use 'windwp/nvim-autopairs'
 
+  -- Add indentation guides to all lines
+  use "lukas-reineke/indent-blankline.nvim"
+
   -- Colorscheme with VScode's light and dark theme
   use 'Mofiqul/vscode.nvim'
 end)
@@ -40,6 +43,8 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync()]]
+
 local servers = {'gopls', 'rust_analyzer'}
 
 for _, lsp in pairs(servers) do
@@ -57,6 +62,11 @@ require('nvim-treesitter.configs').setup {
 
 -- nvim-autopairs configuration
 require('nvim-autopairs').setup{}
+
+-- indent-blankline configuration
+require("indent_blankline").setup {
+  show_trailing_blankline_indent = false,
+}
 
 -- Set colorscheme
 vim.g.vscode_style = 'dark'
