@@ -8,6 +8,7 @@ vim.opt.cursorlineopt = 'number'
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.termguicolors = true
+vim.opt.statusline = '%f %y%m%r %= %l/%L %c '
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
