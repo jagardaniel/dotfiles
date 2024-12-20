@@ -1,23 +1,24 @@
--- Include plugins and plugin settings
-require('plugins')
+-- Global
+vim.g.mapleader = " "
 
--- General options
+-- Options
 vim.opt.number = true
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = 'number'
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-vim.opt.termguicolors = true
-vim.opt.statusline = '%f %y%m%r %= %l/%L %c '
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 vim.opt.softtabstop = -1
+vim.opt.wrap = false
 
 -- Keymaps
-vim.keymap.set('i', 'jj', '<Esc>')
-vim.g.mapleader = ','
+vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Bootstrap and setup lazy.nvim
+require("config.lazy")
