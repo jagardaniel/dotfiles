@@ -7,11 +7,11 @@ return {
       enabled = true,
       indent = {
         char = "▎",
-        hl = "Whitespace",
       },
       scope = {
         char = "▎",
-        hl = "SnacksIndent",
+        hl = "Conceal",
+        only_current = true,
       },
       animate = { enabled = false },
     },

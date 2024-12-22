@@ -23,5 +23,6 @@ return {
     vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "Fzf buffers" })
     vim.keymap.set("n", "<leader>fg", fzf.live_grep, { desc = "Fzf live grep" })
     vim.keymap.set("n", "<leader>fh", fzf.helptags, { desc = "Fzf helptags" })
+    vim.keymap.set("n", "<leader>fc", function() fzf.files({ cwd = vim.fn.stdpath("config") }) end, { desc = "Fzf files (config)" })
   end
 }

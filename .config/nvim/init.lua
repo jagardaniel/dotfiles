@@ -15,6 +15,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = -1
 vim.opt.wrap = false
+vim.opt.list = true
 
 -- Keymaps
 vim.keymap.set("i", "jj", "<Esc>")
