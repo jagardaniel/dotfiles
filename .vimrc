@@ -1,11 +1,8 @@
 filetype plugin indent on
 syntax on
 
-colorscheme pablo
-
-if has("win32") || has("win64")
-    set encoding=utf-8
-endif
+colorscheme retrobox
+set background=dark
 
 set number
 set wildmenu
@@ -18,6 +15,9 @@ set t_vb=
 set hlsearch
 set smartcase
 set ignorecase
+
+set splitright
+set splitbelow
 
 set autoindent
 set expandtab
